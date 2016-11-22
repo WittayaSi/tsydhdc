@@ -2,9 +2,11 @@
 
 namespace frontend\controllers;
 
+
+
 class CountserviceController extends \yii\web\Controller
 {
-	public $enableCsrfValidation = false; 
+    public $enableCsrfValidation = false; 
 
     public function actionIndex()
     {
@@ -19,10 +21,10 @@ class CountserviceController extends \yii\web\Controller
             $selyear = $_POST['selyear'];
             
         }
-        $sql = "select * from opd_count_service where selyear=$selyear";
+        $sql = "select * from sys_count_service where selyear=$selyear";
 
         try {
-            $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
+            $rawData = \Yii::$app->db2->createCommand($sql)->queryAll();
         } catch (\yii\db\Exception $e) {
             throw new \yii\web\ConflictHttpException('sql error');
         }

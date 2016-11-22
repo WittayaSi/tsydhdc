@@ -40,7 +40,7 @@ AppAsset::register($this);
             $report_menu_itms[] = ['label' => 'ภูมิคุ้มกันโรค', 'url' => ['/epi/index']];
 
             $menuItems = [
-                ['label' => 'อัพโหลดไฟล์', 'url' => ['/upload-fortythree/index']],
+                //['label' => 'อัพโหลดไฟล์', 'url' => ['/upload-fortythree/index']],
                 //['label' => 'All Data', 'url' => ['/sys-count-all/index']],
                 ['label' => 'รายงาน', 'items' => $report_menu_itms],
             ];

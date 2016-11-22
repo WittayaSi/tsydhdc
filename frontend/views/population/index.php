@@ -29,9 +29,16 @@
     ?>
 </p>
 
-<p>
+<p>-
     <?php
-    //echo \yii\helpers\Html::a(' สิทธิการรักษาของประชากรในเขตพื้นที่รับผิดชอบ', ['population/sit']);
+    echo \yii\helpers\Html::a(' ประเภทการอยู่อาศัยซ้ำซ้อนกัน', ['population/duplicate']);
+    
+    ?>
+</p>
+
+<p>-
+    <?php
+    echo \yii\helpers\Html::a(' เป้าหมายพัฒนาการ', ['population/evoltarget']);
     
     ?>
 </p>

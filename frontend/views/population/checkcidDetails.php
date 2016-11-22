@@ -1,13 +1,16 @@
 <?php
-	use yii\helpers\Html;
-	use miloschuman\highcharts\Highcharts;
-	use kartik\grid\GridView;
-    $this->title = 'รายชื่อ';
-    $this->params['breadcrumbs'][] = ['label' => 'ประชากร', 'url' => ['population/index']];
-    $this->params['breadcrumbs'][] = ['label' => 'เช็คเลข 13 หลัก', 'url' => ['population/checkcid']];
-	$this->params['breadcrumbs'][] = 'รายชื่อ';
+
+use yii\helpers\Html;
+use miloschuman\highcharts\Highcharts;
+use kartik\grid\GridView;
+
+$this->title = 'รายชื่อ';
+$this->params['breadcrumbs'][] = ['label' => 'ประชากร', 'url' => ['population/index']];
+$this->params['breadcrumbs'][] = ['label' => 'เช็คเลข 13 หลัก', 'url' => ['population/checkcid']];
+$this->params['breadcrumbs'][] = 'รายชื่อ';
 ?>
-<?php 
+<?php
+
 $gridColumn = [
     //['class' => 'yii\grid\SerialColumn'],
 
@@ -27,9 +30,10 @@ $gridColumn = [
     [
         'attribute' => 'FULLNAME',
         'label' => 'ชื่อ - สกุล',
-        'value' => function($data){
-                    return $data['NAME'].' '.' '.$data['LNAME'];
-                }
+        'value' => function($data) {
+            return $data['NAME'] . ' ' . ' ' . $data['LNAME'];
+        },
+        'noWrap' => true,
     ],
     [
         'attribute' => 'NATION',
@@ -44,7 +48,9 @@ $gridColumn = [
 
 <?php $header = '<i class="glyphicon glyphicon-th-list"></i> รายชื่อที่ข้อมูลผิดพลาด' ?>
 
-<?= GridView::widget([
+<?=
+
+GridView::widget([
     'dataProvider' => $dataProvider,
     'pjax' => true,
     'pjaxSettings' => [
@@ -65,6 +71,6 @@ $gridColumn = [
         'type' => GridView::TYPE_INFO,
         'heading' => $header,
     ],
-]); 
+]);
 ?>
 

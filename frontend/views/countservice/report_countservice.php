@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use kartik\widgets\Select2;
 ?>
 <?php
 $this->params['breadcrumbs'][] = ['label' => 'บริการผู้ป่วยนอก', 'url' => ['countservice/index']];
@@ -8,32 +9,34 @@ $this->params['breadcrumbs'][] = 'การมารับบริการผ�
 ?>
 
 <div class='well'>
-    <form method="POST">
-        <div class='row'>
-            <div class="col-sm-3">
-                
-            </div>
-            <div class="col-sm-1">
-            <h5>ปีงบประมาณ: </h5>
-            </div>
-            <div class='col-sm-3'>
-               
-                <?php
-                 $list_year =  [
+    <div class="row">
+        <div class="col-lg-4">
+        </div>
+        <div class="col-lg-4" style="text-align: center;">
+            <div>เลือกสถานบริการสาธารณสุข</div>
+            <form method="POST">
+                <p>
+                    <?php
+                    $list_year =  [
                     '2014' => '2557',
                     '2015' => '2558',
-                    '2016' => '2559'];
-                echo Html::dropDownList('selyear', $selyear, $list_year,[
-                    'class' => 'form-control'
-                ]);
-                ?>
-            </div>
-            <div class='col-sm-3'>
-
-                <button class='btn btn-danger'>ประมวลผล</button>
-            </div>
+                    '2016' => '2559',
+                    '2017' => '2560'];
+                    ?>
+                    <?=
+                    Select2::widget([
+                        'name' => 'selyear',
+                        'data' => $list_year,
+                        'options' => [
+                            'placeholder' => empty($selyear) ? 'Select here...' : ($selyear+543),
+                            'onChange' => 'this.form.submit()',
+                        ],
+                    ]);
+                    ?>
+                </p>
+            </form>
         </div>
-    </form>
+    </div>
 </div>
 <!--<a href="#" id="btn_sql">ชุดคำสั่ง</a> -->
 <div id="sql" style="display: none"><?= '' ?></div>

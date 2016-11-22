@@ -11,54 +11,35 @@ $gridColumn = [
     //['class' => 'yii\grid\SerialColumn'],
 
     [
-        'attribute' => 'HOSPCODE',
-        'label' => 'รหัสสถานบริการ'
+        'attribute' => 'hospcode',
+        'label' => 'รหัสสถานบริการ',
+        'noWrap' => true
     ],
     [
-        'attribute' => 'HOSPNAME',
+        'attribute' => 'hospname',
         'label' => 'ชื่อสถานบริการ',
         'noWrap' => true
     ],
     [
-        'attribute' => 'THAI',
-        'label' => 'คนไทย'
+        'attribute' => 'type1',
+        'label' => 'TYPE1',
+        'noWrap' => true
     ],
     [
-        'attribute' => 'TYPE1',
-        'label' => 'TYPE1'
+        'attribute' => 'type2',
+        'label' => 'TYPE2',
+        'noWrap' => true
     ],
     [
-        'attribute' => 'TYPE2',
-        'label' => 'TYPE2'
+        'attribute' => 'type3',
+        'label' => 'TYPE3',
+        'noWrap' => true
     ],
     [
-        'attribute' => 'TYPE3',
-        'label' => 'TYPE3'
+        'attribute' => 'type4',
+        'label' => 'TYPE4',
+        'noWrap' => true
     ],
-    [
-        'attribute' => 'TYPE4',
-        'label' => 'TYPE4'
-    ],
-    [
-        'attribute' => 'NOT_THAI',
-        'label' => 'ต่างด้าว'
-    ],
-    [
-        'attribute' => 'NOT_THAI_TYPE1',
-        'label' => 'TYPE1'
-    ],
-    [
-        'attribute' => 'NOT_THAI_TYPE2',
-        'label' => 'TYPE2'
-    ],
-    [
-        'attribute' => 'NOT_THAI_TYPE3',
-        'label' => 'TYPE3'
-    ],
-    [
-        'attribute' => 'NOT_THAI_TYPE4',
-        'label' => 'TYPE4'
-    ]
 ];
 ?>
 
